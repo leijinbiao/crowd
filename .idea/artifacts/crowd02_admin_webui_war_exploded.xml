@@ -17,7 +17,7 @@
           <element id="archive" name="crowd03-admin-component-1.0-SNAPSHOT.jar">
             <element id="module-output" name="crowd03-admin-component" />
           </element>
-          <element id="archive" name="crowd04-admin-entity-1.0-SNAPSHOT.jar">
+          <element id="archive" name="crowd04-admin-com.czklps.crowd.entity-1.0-SNAPSHOT.jar">
             <element id="module-output" name="crowd04-admin-entity" />
           </element>
           <element id="archive" name="crowd05-common-util-1.0-SNAPSHOT.jar">
