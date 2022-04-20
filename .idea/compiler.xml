@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="crowd04-admin-entity" />
+        <module name="crowd06-common-reverse" />
+        <module name="crowd02-admin-webui" />
+        <module name="crowd05-common-util" />
+        <module name="crowd03-admin-component" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="crowd01-admin-parent" target="8" />
+      <module name="crowd02-admin-webui" target="8" />
+      <module name="crowd03-admin-component" target="8" />
+      <module name="crowd04-admin-entity" target="8" />
+      <module name="crowd05-common-util" target="8" />
+      <module name="crowd06-common-reverse" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
