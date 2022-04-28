@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Maven: org.slf4j:jcl-over-slf4j:1.7.7">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../repository/org/slf4j/jcl-over-slf4j/1.7.25/jcl-over-slf4j-1.7.25-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

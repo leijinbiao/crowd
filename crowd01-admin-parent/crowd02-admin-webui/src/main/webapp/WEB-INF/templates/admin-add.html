@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head th:replace="common/head::common_header(~{::title},~{::link})">
+    <title>Title</title>
+</head>
+<body>
+
+<div th:replace="common/nav::common_nav"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div th:replace="common/sidebar::common_sidebar"></div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            
+            <div/>
+        </div>
+    </div>
+</div>
+<div th:replace="common/js::common_js(~{::script})"></div>
+</body>
+</html>
