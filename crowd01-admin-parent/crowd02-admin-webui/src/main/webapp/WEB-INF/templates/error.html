@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="GB18030">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keys" content="">
+    <meta name="author" content="">
+    <title>admin-login</title>
+    <link rel="stylesheet" th:href="@{/static/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/static/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{/static/css/login.css}">
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <div><a class="navbar-brand" href="index.html" style="font-size:32px;">尚筹网-创意产品众筹平台</a></div>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row text-center">
+        <h2 class="form-signin-heading">
+            <i class="glyphicon glyphicon-log-in"></i>
+            尚筹网信息:
+        </h2>
+        <h3 th:text="${exception.message}"></h3>
+        <button id="btn" class="btn btn-lg btn-success btn-block">返回</button>
+    </div>
+</div>
+
+<th:block th:replace="common/js::common_js(~{::script})">
+    <script type="text/javascript">
+        $(function(){
+            $("#btn").click(function(){
+                window.history.back();
+            });
+        });
+    </script>
+</th:block>
+</body>
+</html>
