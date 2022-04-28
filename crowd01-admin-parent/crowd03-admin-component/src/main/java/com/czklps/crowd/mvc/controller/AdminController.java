@@ -18,6 +18,12 @@ public class AdminController {
     @Autowired
     private AdminService adminService;
 
+    @RequestMapping(value = "/admin/add",method = RequestMethod.POST)
+    public String add(Admin admin){
+        adminService.saveAdmin(admin);
+        return "redirect:/admin";
+    }
+
     @RequestMapping(value = "/admin/doLogin", method = RequestMethod.POST)
     public String doLogin(Admin data, HttpSession session) throws LoginFailedException {
 
