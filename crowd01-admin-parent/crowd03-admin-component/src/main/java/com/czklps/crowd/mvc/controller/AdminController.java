@@ -20,11 +20,16 @@ public class AdminController {
 
     @RequestMapping(value = "/admin/doLogin", method = RequestMethod.POST)
     public String doLogin(Admin data, HttpSession session) throws LoginFailedException {
-
         Admin admin = adminService.getAdminByLoginAcct(data);
 
         session.setAttribute(CrowdConstant.ATTR_NAME_LOGIN_ADMIN, admin);
         return "redirect:/admin/main";
+    }
+
+    @RequestMapping(value = "/admin/add", method = RequestMethod.POST)
+    public String add(Admin data){
+        adminService.saveAdmin(data);
+        return "redirect:/admin?pageNum="+Integer.MAX_VALUE;
     }
 
     @RequestMapping(value = "/admin/checkout", method = RequestMethod.GET)

@@ -1,6 +1,7 @@
 package com.czklps.crowd.mapper;
 
 import com.czklps.crowd.entity.Admin;
+import com.czklps.crowd.exception.LoginFailedException;
 import com.czklps.crowd.service.api.AdminService;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -38,6 +38,7 @@
     <mvc:view-controller path="/" view-name="admin-login"/>
     <mvc:view-controller path="/admin/login" view-name="admin-login"/>
     <mvc:view-controller path="/admin/main" view-name="main"/>
+    <mvc:view-controller path="/admin/toAdd" view-name="admin-add"/>
 
     <mvc:default-servlet-handler/>
 
