@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head></head>
+<th:block th:fragment="common_js(scripts)">
+    <script th:src="@{/static/jquery/jquery-2.1.1.min.js}"></script>
+    <script th:src="@{/static/bootstrap/js/bootstrap.min.js}"></script>
+    <script th:src="@{/static/layer/layer.js}"></script>
+    <script th:src="@{/static/script/docs.min.js}"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".list-group-item").click(function () {
+                if ($(this).find("ul")) {
+                    $(this).toggleClass("tree-closed");
+                    if ($(this).hasClass("tree-closed")) {
+                        $("ul", this).hide("fast");
+                    } else {
+                        $("ul", this).show("fast");
+                    }
+                }
+            });
+        });
+    </script>
+    <th:block th:if="${scripts} != null">
+        <th:block th:replace="${scripts}"></th:block>
+    </th:block>
+</th:block>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <script type="text/javascript" th:src="@{/static/jquery/jquery-2.1.1.min.js}"></script>
+</head>
+<body>
+<a th:href="@{/testSSM}">测试 ssm整合 </a>
+<p th:text="@{exception}"></p>
+<script type="text/javascript">
+    $(function () {
+        $("#btn1").click(function () {
+            var array = [1, 2, 3]
+            var json = JSON.stringify(array);
+            $.ajax({
+                "url": "/crowd/testAjax",
+                "data": json,
+                "type": "post",
+                "contentType": "application/json;charset=utf-8",
+                "datatype": "json",
+                "success": function (res) {
+                    console.log(res);
+                },
+                "error": function (res) {
+                    console.log(res);
+                }
+            })
+        })
+    })
+</script>
+</body>
+</html>

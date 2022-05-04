@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head th:replace="common/head :: common_header(~{::title},~{::link})">
+    <title>user</title>
+    <link rel="stylesheet" th:href="@{/static/css/main.css}">
+    <link rel="stylesheet" th:href="@{/static/css/pagination.css}">
+    <style type="text/css" th:inline="css">
+        .tree li {
+            list-style-type: none;
+            cursor: pointer;
+        }
+
+        table tbody tr:nth-child(odd) {
+            background: #F4F4F4;
+        }
+
+        table tbody td:nth-child(even) {
+            color: #C00;
+        }
+    </style>
+</head>
+<body>
+
+<div th:replace="common/nav :: common_nav"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div th:replace="common/sidebar::common_sidebar"></div>
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="glyphicon glyphicon-th"></i> 数据列表</h3>
+                </div>
+                <div class="panel-body">
+                    <form class="form-inline" th:action="@{/admin}" method="post" role="form" style="float:left;">
+                        <div class="form-group has-feedback">
+                            <div class="input-group">
+                                <div class="input-group-addon">查询条件</div>
+                                <input class="form-control has-success" name="keyword" th:value="${param.keyword}"
+                                       type="text" placeholder="请输入查询条件">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-warning"><i class="glyphicon glyphicon-search"></i> 查询
+                        </button>
+                    </form>
+                    <button type="button" class="btn btn-danger" style="float:right;margin-left:10px;"><i
+                            class=" glyphicon glyphicon-remove"></i> 删除
+                    </button>
+                    <a th:href="@{/admin/to/add}" class="btn btn-primary" style="float:right;"><i class="glyphicon glyphicon-plus"></i> 新增 </a>
+                    <br>
+                    <hr style="clear:both;">
+                    <div class="table-responsive">
+                        <table class="table  table-bordered">
+                            <thead>
+                            <tr>
+                                <th width="30">#</th>
+                                <th width="30"><input type="checkbox"></th>
+                                <th>账号</th>
+                                <th>名称</th>
+                                <th>邮箱地址</th>
+                                <th width="100">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <th:block th:if="${pageInfo.list.isEmpty()}">
+                                <tr>
+                                    <td colspan="6" class="text-center">抱歉！没有查询到您要的数据！</td>
+                                </tr>
+                            </th:block>
+                            <th:block th:if="${not pageInfo.list.isEmpty()}">
+                                <tr th:each="admin ,adminStat : ${pageInfo.list}">
+                                    <td th:text="${adminStat.index}"></td>
+                                    <td><input type="checkbox"></td>
+                                    <td th:text="${admin.loginAcct}"></td>
+                                    <td th:text="${admin.userName}"></td>
+                                    <td th:text="${admin.email}"></td>
+                                    <td>
+                                        <button type="button" class="btn btn-success btn-xs"><i
+                                                class=" glyphicon glyphicon-check"></i></button>
+                                        <button type="button" class="btn btn-primary btn-xs"><i
+                                                class=" glyphicon glyphicon-pencil"></i></button>
+                                        <a th:href="@{/admin}+'/'+${admin.id}+'/'+${pageInfo.pageNum}"
+                                           class="btn btn-danger btn-xs" onclick="delBtn(event)"><i class="glyphicon glyphicon-remove"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </th:block>
+                            </tbody>
+                            </th:block>
+                            <tfoot>
+                            <th:block th:if="${not pageInfo.list.isEmpty()}">
+                                <tr>
+                                    <td colspan="6" align="center">
+                                        <div id="Pagination" class="pagination"><!-- 这里显示分页 --></div>
+                                    </td>
+                                </tr>
+                            </th:block>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form id="delForm" method="post">
+    <input type="hidden" name="_method" value="delete">
+</form>
+
+<th:block th:replace="common/js :: common_js(~{::script})">
+    <script th:src="@{/static/jquery/jquery.pagination.js}"></script>
+    <script th:inline="javascript" type="text/javascript">
+        function delBtn(event){
+            var delForm = document.getElementById("delForm")
+            let src = event.currentTarget.href
+            /*<![CDATA[*/
+            var keyword = [[${param.keyword}]]
+            /*]]>*/
+            // 如果 thymeleaf 中拿出的 keyword 不为空时添加至路径
+            if (keyword != null) src += "/" + keyword
+
+            delForm.action = src
+
+            delForm.submit();
+
+            event.preventDefault();
+        }
+
+        $(function () {
+            initPagination()
+        });
+
+        function initPagination() {
+            var num_entries = [(${pageInfo.total})];
+            // 创建分页
+            $("#Pagination").pagination(num_entries, {
+                num_edge_entries: 3, //边缘页数
+                num_display_entries: 4, //主体页数
+                current_page: [(${pageInfo.pageNum - 1})],
+                callback: pageselectCallback,
+                items_per_page: 5 //每页显示1项
+            });
+        };
+
+        function pageselectCallback(page_index, jq) {
+            let page_num = page_index + 1;
+            /*<![CDATA[*/
+            var keyword = [[${param.keyword}]]
+            /*]]>*/
+            if (keyword == null) {
+                keyword = "";
+            }
+            window.location.href = "[(@{/admin})]?pageNum=" + page_num + "&keyword=" + keyword;
+            return false;
+        }
+
+    </script>
+</th:block>
+</body>
+</html>
