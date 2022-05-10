@@ -3,19 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd
-         http://www.springframework.org/schema/context
-          http://www.springframework.org/schema/context/spring-context.xsd
-           http://www.springframework.org/schema/mvc
-            http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <context:component-scan base-package="com.czklps.crowd.mvc"></context:component-scan>
-
-    <mvc:view-controller path="/admin/addd" view-name="admin-add"/>
-    <mvc:view-controller path="/" view-name="admin-login"/>
-    <mvc:view-controller path="/admin/login" view-name="admin-login"/>
-    <mvc:view-controller path="/admin/main" view-name="main"/>
 
     <mvc:annotation-driven/>
 
@@ -41,9 +33,17 @@
         <property name="exceptionMappings">
             <props>
                 <prop key="java.lang.Exception">error</prop>
+                <prop key="com.czklps.crowd.exception.AccessForbiddenException">admin-login</prop>
             </props>
         </property>
     </bean>
+
+    <mvc:view-controller path="/" view-name="main"/>
+    <mvc:view-controller path="/main" view-name="main"/>
+    <mvc:view-controller path="/admin/login" view-name="admin-login"/>
+    <mvc:view-controller path="/admin/toAdd" view-name="admin-add"/>
+    <mvc:view-controller path="/role" view-name="role-page"/>
+    <mvc:view-controller path="/menu" view-name="menu-page"/>
 
     <mvc:default-servlet-handler/>
 
@@ -51,7 +51,6 @@
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
             <mvc:exclude-mapping path="/admin/login"/>
-            <mvc:exclude-mapping path="/"/>
             <mvc:exclude-mapping path="/admin/doLogin"/>
             <mvc:exclude-mapping path="/**/*.*"/>
             <bean class="com.czklps.crowd.mvc.interceptor.LoginInterceptor"></bean>

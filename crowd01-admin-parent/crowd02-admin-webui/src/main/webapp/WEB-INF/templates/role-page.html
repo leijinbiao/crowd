@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head th:replace="common/head::common_header(~{::title},~{::link})">
+    <title>role-page</title>
+    <link rel="stylesheet" th:href="@{/static/css/main.css}">
+    <link rel="stylesheet" th:href="@{/static/css/pagination.css}">
+</head>
+<body>
+<div th:replace="common/nav::common_nav"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div th:replace="common/sidebar::common_sidebar"></div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="glyphicon glyphicon-th"></i> 数据列表</h3>
+                </div>
+                <div class="panel-body">
+                    <form class="form-inline" role="form" style="float:left;">
+                        <div class="form-group has-feedback">
+                            <div class="input-group">
+                                <div class="input-group-addon">查询条件</div>
+                                <input id="keywordInput" class="form-control has-success" type="text"
+                                       placeholder="请输入查询条件">
+                            </div>
+                        </div>
+                        <button id="searchBtn" type="button" class="btn btn-warning"><i
+                                class="glyphicon glyphicon-search"></i> 查询
+                        </button>
+                    </form>
+                    <button type="button" id="batchRemoveBtn" class="btn btn-danger" style="float:right;margin-left:10px;"><i
+                            class="glyphicon glyphicon-remove"></i> 删除
+                    </button>
+                    <button id="showAddModalBtn" type="button" class="btn btn-primary" style="float:right;"><i
+                            class="glyphicon glyphicon-plus"></i> 新增
+                    </button>
+                    <br>
+                    <hr style="clear:both;">
+                    <div class="table-responsive">
+                        <table class="table  table-bordered">
+                            <thead>
+                            <tr>
+                                <th width="30">#</th>
+                                <th width="30"><input class="summaryBox" type="checkbox"></th>
+                                <th>名称</th>
+                                <th width="100">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody id="rolePageBody">
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="6" align="center">
+                                    <div id="Pagination" class="pagination"><!-- 这里显示分页 --></div>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="addModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" >新增角色</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="roleName" placeholder="请输入角色名称">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="addBtn" type="button" class="btn btn-primary">添加</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="updateModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">修改角色</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="roleName" placeholder="请输入角色名称">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="updateBtn" type="button" class="btn btn-primary">修改</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<th:block th:replace="common/js::common_js(~{::script})">
+    <script th:src="@{/static/jquery/jquery.pagination.js}"></script>
+    <script type="text/javascript" th:src="@{/static/crowd/my-role.js}"></script>
+    <script type="text/javascript">
+        $(function () {
+            window.pageNum = 1;
+            window.pageSize = 5;
+            window.keyword = "";
+
+            generate();
+
+            $("#showAddModalBtn").click(function () {
+                $("#addModal").modal('show')
+            })
+            /**
+             * 添加功能
+             */
+            $("#addBtn").click(function () {
+                let roleName = $("#addModal [name=roleName]").val()
+                $.ajax({
+                    "url": "role/add",
+                    "type": "post",
+                    "data": {
+                        name: roleName
+                    },
+                    "dataType": "json",
+                    "success":function(res){
+                        let result = res.result;
+
+                        if(result == "SUCCESS"){
+                            layer.msg("添加成功");
+
+                            window.pageNum = 99999999;
+
+                            generate();
+                        }
+                        if(result == "FAILED"){
+                            layer.msg("操作失败！"+res.message)
+                        }
+                    },
+                    "error":function(res){
+                        layer.msg(res.status+" "+res.statusText);
+                    }
+                })
+                //关闭模态框
+                $("#addModal").modal('hide')
+
+                $("#addModal [name=roleName]").val("")
+            })
+
+            /**
+             * 弹出模态框
+             */
+            $("#rolePageBody").on("click",".pencilBtn",function(){
+                //获取roleValue
+                let roleValue = $(this).parent().prev().text();
+
+                $("#updateModal [name=roleName]").val(roleValue)
+
+                window.roleId = this.id;
+
+                $("#updateModal").modal('show');
+            })
+
+            /**
+             * 修改功能
+             */
+            $("#updateBtn").click(function () {
+                let roleName = $("#updateModal [name=roleName]").val()
+                $.ajax({
+                    "url": "role/update",
+                    "type": "post",
+                    "data": {
+                        id: window.roleId,
+                        name: roleName
+                    },
+                    "dataType": "json",
+                    "success":function(res){
+                        let result = res.result;
+
+                        if(result == "SUCCESS"){
+                            layer.msg("修改成功");
+
+                            generate();
+                        }
+                        if(result == "FAILED"){
+                            layer.msg("修改失败！"+res.message)
+                        }
+                    },
+                    "error":function(res){
+                        layer.msg(res.status+" "+res.statusText);
+                    }
+                })
+                //关闭模态框
+                $("#updateModal").modal('hide')
+
+                $("#updateModal [name=roleName]").val("")
+            })
+
+            /**
+             * 删除功能
+             */
+            $("#rolePageBody").on("click",".removeBtn",function(){
+                let roleName = $(this).parent().prev().text();
+                window.roleId = this.id;
+                let role= [{
+                    "roleId":window.roleId,
+                    "roleName":roleName
+                }]
+
+                // 生成 RoleId 并在全局变量里存入删除项的名称属性
+                generateRoleId(role);
+                // 将 roleIdArray 转换成 json
+                let json = JSON.stringify(window.roleIdArray);
+                batchRemove(json)
+
+            })
+            /**
+             * 全选
+             */
+            $(".summaryBox").click(function(){
+                let currentStatus = this.checked;
+
+                $(".itemBox").prop("checked",currentStatus)
+            })
+
+            /**
+             * 批量删除和单个删除的共同请求方法
+             */
+            function batchRemove(json){
+                // 将生成的 deleteItemName 属性添加到弹出层容器里面
+                layer.confirm('确定要删除以下角色吗?'+window.deleteItemName, {
+                    btn: ['确定','取消']
+                }, function(index, layero){
+                    $.ajax({
+                        "url":"role/remove",
+                        "type":"post",
+                        "dataType":"json",
+                        "contentType":"application/json;charset=utf-8",
+                        "data":json,
+                        "success":function(res){
+
+                            let result = res.result;
+
+                            layer.close(index);
+
+                            if(result == "SUCCESS"){
+                                layer.msg("删除成功");
+
+                                generate();
+                            }
+                            if(result == "FAILED"){
+                                layer.msg("操作失败！"+res.message)
+                            }
+                        },
+                        "error":function(res){
+                            layer.close(index);
+                            layer.msg(res.status+" "+res.statusText);
+                        }
+
+                    })
+                    // 点击确定后无论如何都要将复选框设置成补选中
+                    $(".summaryBox").prop("checked","");
+                }, function(index){
+                    layer.close(index);
+                });
+
+            }
+
+            /**
+             * 反选
+             */
+            $("#rolePageBody").on("click",".itemBox",function(){
+                let checkedBoxCount = $(".itemBox:checked").length;
+                let totalBoxCount = $(".itemBox").length;
+                $(".summaryBox").prop("checked",checkedBoxCount==totalBoxCount)
+            })
+
+            /**
+             * 点击批量删除按钮进行删除
+             */
+            $("#batchRemoveBtn").click(function(){
+                let roleArray = [];
+
+                $(".itemBox:checked").each(function(){
+                    let roleName = $(this).parent().next().text();
+                    let roleId = this.id;
+                    roleArray.push({
+                        "roleId":roleId,
+                        "roleName":roleName
+                    })
+                })
+                if(roleArray.length==0){
+                    layer.msg("请至少选择一个进行删除")
+                    return ;
+                }
+                // 生成 RoleId 并在全局变量里存入删除项的名称属性
+                generateRoleId(roleArray);
+                // 将 roleIdArray 转换成 json
+                let json = JSON.stringify(window.roleIdArray);
+                // 调用批量删除和单个删除的共同请求方法
+                batchRemove(json)
+            })
+
+            /**
+             * 关键词搜索
+             */
+            $("#searchBtn").click(function () {
+
+                window.keyword = $("#keywordInput").val();
+
+                generate();
+
+            });
+
+        })
+    </script>
+</th:block>
+</body>
+</html>

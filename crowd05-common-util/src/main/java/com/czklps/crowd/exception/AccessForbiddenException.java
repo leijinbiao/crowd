@@ -1,8 +1,6 @@
 package com.czklps.crowd.exception;
 
-public class AccessForbiddenException extends RuntimeException{
-
-    
+public class AccessForbiddenException extends Exception{
     public AccessForbiddenException() {
         super();
     }
@@ -21,5 +19,10 @@ public class AccessForbiddenException extends RuntimeException{
 
     protected AccessForbiddenException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
+    }
+
+    @Override
+    public String toString() {
+        return this.getMessage();
     }
 }

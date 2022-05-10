@@ -3,6 +3,8 @@ package com.czklps.crowd.service.Impl;
 import com.czklps.crowd.constant.CrowdConstant;
 import com.czklps.crowd.entity.Admin;
 import com.czklps.crowd.entity.AdminExample;
+import com.czklps.crowd.exception.LoginAcctAlreadyInUseException;
+import com.czklps.crowd.exception.LoginAcctAlreadyInUseForUpdateException;
 import com.czklps.crowd.exception.LoginFailedException;
 import com.czklps.crowd.mapper.AdminMapper;
 import com.czklps.crowd.service.api.AdminService;
@@ -11,8 +13,12 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -23,8 +29,23 @@ public class AdminServiceImpl implements AdminService {
     private AdminMapper adminMapper;
 
     @Override
-    public void saveAdmin(Admin admin) {
-        adminMapper.insert(admin);
+    public void saveAdmin(Admin admin) throws LoginAcctAlreadyInUseException {
+        String password = CrowdUtil.md5(admin.getUserPswd());
+        admin.setUserPswd(password);
+
+        Date date = new Date();
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-hh HH:mm:ss");
+        String createTime = format.format(date);
+        admin.setCreateTime(createTime);
+
+        try {
+            adminMapper.insert(admin);
+        }catch (Exception e){
+            if(e instanceof DuplicateKeyException) {
+                throw new LoginAcctAlreadyInUseException(CrowdConstant.MESSAGE_LOGIN_ACCT_ALREADY_IN_USE);
+            }
+        }
+
     }
 
     @Override
@@ -87,6 +108,22 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public void remove(Integer adminId) {
         adminMapper.deleteByPrimaryKey(adminId);
+    }
+
+    @Override
+    public Admin getAdminById(Integer id) {
+        return adminMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public void editAdmin(Admin data) throws LoginAcctAlreadyInUseForUpdateException {
+        try {
+            adminMapper.updateByPrimaryKeySelective(data);
+        }catch (Exception e){
+            if(e instanceof DuplicateKeyException) {
+                throw new LoginAcctAlreadyInUseForUpdateException(CrowdConstant.MESSAGE_LOGIN_ACCT_ALREADY_IN_USE);
+            }
+        }
     }
 
 }

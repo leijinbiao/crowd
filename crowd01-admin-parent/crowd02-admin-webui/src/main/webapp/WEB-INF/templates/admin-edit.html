@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="www.thymeleaf.org">
 <head th:replace="common/head::common_header(~{::title},~{::link})">
-    <title>admin-add</title>
+    <title>admin-edit</title>
     <link rel="stylesheet" th:href="@{/static/css/main.css}">
     <link rel="stylesheet" th:href="@{/static/css/doc.min.css}">
+    <style>
+        .tree li {
+            list-style-type: none;
+            cursor:pointer;
+        }
+    </style>
 </head>
 <body>
-
 <div th:replace="common/nav::common_nav"></div>
 <div class="container-fluid">
     <div class="row">
@@ -15,53 +20,32 @@
             <ol class="breadcrumb">
                 <li><a href="#">首页</a></li>
                 <li><a href="#">数据列表</a></li>
-                <li class="active">新增</li>
+                <li class="active">修改</li>
             </ol>
             <div class="panel panel-default">
                 <div class="panel-heading">表单数据<div style="float:right;cursor:pointer;" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-question-sign"></i></div></div>
                 <div class="panel-body">
-                    <form role="form" th:action="@{/admin/add}" method="post">
+                    <form role="form" th:action="@{/admin/edit}" method="post">
+                        <input type="hidden" name="_method" value="put">
+                        <input type="hidden" name="id" th:value="${admin.id}">
+                        <input type="hidden" name="pageNum" th:value="${pageNum}">
+                        <input type="hidden" name="keyword" th:value="${keyword}">
                         <div class="form-group">
                             <label for="loginAcct">登陆账号</label>
-                            <input type="text" class="form-control" name="loginAcct" id="loginAcct" placeholder="请输入登陆账号">
-                            <p class="help-block label label-warning" th:text="${exception}"></p>
-                        </div>
-                        <div class="form-group">
-                            <label for="userPswd">登陆密码</label>
-                            <input type="password" class="form-control" name="userPswd" id="userPswd" placeholder="请输入登陆密码">
+                            <input type="text" th:value="${admin.loginAcct}" name="loginAcct" class="form-control" id="loginAcct">
                         </div>
                         <div class="form-group">
                             <label for="userName">用户名称</label>
-                            <input type="text" class="form-control" name="userName" id="userName" placeholder="请输入用户名称">
+                            <input type="text" th:value="${admin.userName}" name="userName" class="form-control" id="userName">
                         </div>
                         <div class="form-group">
                             <label for="email">邮箱地址</label>
-                            <input type="email" class="form-control" name="email" id="email" placeholder="请输入邮箱地址">
+                            <input type="email" th:value="${admin.email}" name="email" class="form-control" id="email">
                             <p class="help-block label label-warning">请输入合法的邮箱地址, 格式为： xxxx@xxxx.com</p>
                         </div>
-                        <button type="submit" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i>新增</button>
+                        <button type="submit" class="btn btn-success"><i class="glyphicon glyphicon-edit"></i> 修改</button>
                         <button type="reset" class="btn btn-danger"><i class="glyphicon glyphicon-refresh"></i> 重置</button>
                     </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="myModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="myModalLabel">帮助</h4>
-            </div>
-            <div class="modal-body">
-                <div class="bs-callout bs-callout-info">
-                    <h4>测试标题1</h4>
-                    <p>测试内容1，测试内容1，测试内容1，测试内容1，测试内容1，测试内容1</p>
-                </div>
-                <div class="bs-callout bs-callout-info">
-                    <h4>测试标题2</h4>
-                    <p>测试内容2，测试内容2，测试内容2，测试内容2，测试内容2，测试内容2</p>
                 </div>
             </div>
         </div>

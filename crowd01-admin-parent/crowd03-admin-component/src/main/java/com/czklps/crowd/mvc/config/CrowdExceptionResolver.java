@@ -2,6 +2,8 @@ package com.czklps.crowd.mvc.config;
 
 import com.czklps.crowd.constant.CrowdConstant;
 import com.czklps.crowd.exception.AccessForbiddenException;
+import com.czklps.crowd.exception.LoginAcctAlreadyInUseException;
+import com.czklps.crowd.exception.LoginAcctAlreadyInUseForUpdateException;
 import com.czklps.crowd.exception.LoginFailedException;
 import com.czklps.crowd.util.CrowdUtil;
 import com.czklps.crowd.util.ResultEntity;
@@ -17,6 +19,34 @@ import java.io.IOException;
 @ControllerAdvice
 public class CrowdExceptionResolver {
     /**
+     * 处理处理修改账号已经存在的异常
+     * @param exception
+     * @param request
+     * @param response
+     * @return
+     * @throws IOException
+     */
+    @ExceptionHandler(value = LoginAcctAlreadyInUseForUpdateException.class)
+    public ModelAndView resolverLoginAcctAlreadyInUseForUpdateException(LoginAcctAlreadyInUseForUpdateException exception, HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String viewName = "error";
+        return commonException(viewName, exception, request, response);
+    }
+
+    /**
+     * 处理处理账号已经存在的异常
+     * @param exception
+     * @param request
+     * @param response
+     * @return
+     * @throws IOException
+     */
+    @ExceptionHandler(value = LoginAcctAlreadyInUseException.class)
+    public ModelAndView resolverLoginAcctAlreadyInUseException(LoginAcctAlreadyInUseException exception, HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String viewName = "admin-add";
+        return commonException(viewName, exception, request, response);
+    }
+
+    /**
      * 处理处理非法获取资源的异常
      * @param exception
      * @param request
@@ -29,6 +59,7 @@ public class CrowdExceptionResolver {
         String viewName = "admin-login";
         return commonException(viewName, exception, request, response);
     }
+
     /**
      * 处理登录失败的异常
      * @param exception
@@ -42,30 +73,6 @@ public class CrowdExceptionResolver {
         String viewName = "admin-login";
         return commonException(viewName, exception, request, response);
     }
-    /**
-     * 用于处理空指针异常的方法
-     *
-     * @param exception
-     * @param request
-     * @param response
-     * @return
-     * @throws IOException
-     */
-    @ExceptionHandler(value = NullPointerException.class)
-    public ModelAndView nullPointerException(NullPointerException exception, HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String viewName = "error";
-        return commonException(viewName, exception, request, response);
-    }
-
-    /**
-     * 用户处理数学运算错误的方法
-     */
-    @ExceptionHandler(value = ArithmeticException.class)
-    public ModelAndView mathException(ArithmeticException exception, HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String viewName = "error";
-        return commonException(viewName, exception, request, response);
-    }
-
     /**
      * 代码进行优化将冗余的代码提取出来
      *

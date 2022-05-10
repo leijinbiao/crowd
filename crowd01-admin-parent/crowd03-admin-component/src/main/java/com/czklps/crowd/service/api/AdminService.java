@@ -2,13 +2,15 @@ package com.czklps.crowd.service.api;
 
 
 import com.czklps.crowd.entity.Admin;
+import com.czklps.crowd.exception.LoginAcctAlreadyInUseException;
+import com.czklps.crowd.exception.LoginAcctAlreadyInUseForUpdateException;
 import com.czklps.crowd.exception.LoginFailedException;
 import com.github.pagehelper.PageInfo;
 
 import java.util.List;
 
 public interface AdminService {
-    void saveAdmin(Admin admin);
+    void saveAdmin(Admin admin) throws LoginAcctAlreadyInUseException;
 
     List<Admin> getAll();
 
@@ -18,4 +20,7 @@ public interface AdminService {
 
     void remove(Integer adminId);
 
+    Admin getAdminById(Integer id);
+
+    void editAdmin(Admin data) throws LoginAcctAlreadyInUseForUpdateException;
 }
