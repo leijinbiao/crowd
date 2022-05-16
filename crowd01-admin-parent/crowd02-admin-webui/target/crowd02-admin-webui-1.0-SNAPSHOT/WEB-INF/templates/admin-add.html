@@ -22,13 +22,13 @@
                 <div class="panel-body">
                     <form role="form" th:action="@{/admin/add}" method="post">
                         <div class="form-group">
-                            <label for="loginAcct">登陆账号</label>
-                            <input type="text" class="form-control" name="loginAcct" id="loginAcct" placeholder="请输入登陆账号">
+                            <label for="loginAcct">账号</label>
+                            <input type="text" class="form-control" name="loginAcct" id="loginAcct" placeholder="请输入账号">
                             <p class="help-block label label-warning" th:text="${exception}"></p>
                         </div>
                         <div class="form-group">
-                            <label for="userPswd">登陆密码</label>
-                            <input type="password" class="form-control" name="userPswd" id="userPswd" placeholder="请输入登陆密码">
+                            <label for="userPswd">密码</label>
+                            <input type="password" class="form-control" name="userPswd" id="userPswd" placeholder="请输入密码">
                         </div>
                         <div class="form-group">
                             <label for="userName">用户名称</label>
@@ -68,20 +68,6 @@
     </div>
 </div>
 <th:block th:replace="common/js::common_js(~{::script})">
-    <script type="text/javascript">
-        $(function () {
-            $(".list-group-item").click(function(){
-                if ( $(this).find("ul") ) {
-                    $(this).toggleClass("tree-closed");
-                    if ( $(this).hasClass("tree-closed") ) {
-                        $("ul", this).hide("fast");
-                    } else {
-                        $("ul", this).show("fast");
-                    }
-                }
-            });
-        });
-    </script>
 </th:block>
 </body>
 </html>

@@ -23,4 +23,6 @@ public interface AdminService {
     Admin getAdminById(Integer id);
 
     void editAdmin(Admin data) throws LoginAcctAlreadyInUseForUpdateException;
+
+    void saveAdminRoleRelationship(Integer adminId, List<Integer> roleIdList);
 }

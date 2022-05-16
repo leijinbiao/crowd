@@ -1,5 +1,8 @@
 package com.czklps.crowd.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Admin {
     private Integer id;
 

@@ -20,101 +20,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffe6165c-3202-47c8-8b34-45a69c0b3042" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates/admin-edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates/menu-page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates/role-page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/static/crowd/my-role.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/lib/crowd03-admin-component-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/mvc/controller/RoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/service/Impl/RoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/service/api/RoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowd05-common-util/src/main/java/com/czklps/crowd/exception/LoginAcctAlreadyInUseException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowd05-common-util/src/main/java/com/czklps/crowd/exception/LoginAcctAlreadyInUseForUpdateException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd01-admin-parent.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates/assignRole-page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates/modal/modal-menu-add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates/modal/modal-menu-confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates/modal/modal-menu-edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/static/crowd/my-menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/static/layui/css/layui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/static/layui/css/modules/code.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/static/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/static/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/static/layui/css/modules/layer/default/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/static/layui/css/modules/layer/default/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/static/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/static/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/static/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/static/layui/font/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/static/layui/font/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/static/layui/font/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/static/layui/font/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/static/layui/font/iconfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/static/layui/layui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/mvc/controller/AssignController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/mvc/controller/MenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/service/Impl/MenuServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/service/api/MenuService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/test/java/com/czklps/crowd/service/Impl/BB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/test/java/com/czklps/crowd/service/Impl/MenuServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/crowd.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_2_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_3_0_alpha5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_3_0_alpha5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_3_0_alpha5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_3_0_alpha5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_0_31.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_0_31.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_0_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_0_9_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_4_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_4_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_6_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_6_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__edu_washington_cs_types_checker_checker_framework_1_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__edu_washington_cs_types_checker_checker_framework_1_7_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_2_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_2_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_2_0_0_alpha1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_2_0_0_alpha1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_2_0_0_alpha1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_2_0_0_alpha1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_11_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_11_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_11_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_11_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_11_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_11_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_11_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_2_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_2_11_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_2_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_2_11_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_11_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_2_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_2_11_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_11_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_5_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_5_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/crowd02-admin-webui.iml" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/crowd02-admin-webui.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/resources/spring-persist-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/resources/spring-persist-mybatis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/resources/spring-web-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/resources/spring-web-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/resources/mybatis/mapper/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/resources/mybatis/mapper/AdminMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates/admin-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates/admin-add.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates/admin-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates/admin-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates/common/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates/common/sidebar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates/common/js.html" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates/common/js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates/menu-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates/menu-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/static/ztree/zTreeStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/static/ztree/zTreeStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/test/java/com/czklps/crowd/mapper/AdminMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/test/java/com/czklps/crowd/mapper/AdminMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/classes/spring-persist-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/classes/spring-persist-mybatis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/classes/spring-web-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/classes/spring-web-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/classes/spring-persist-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/classes/spring-persist-mybatis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/classes/spring-web-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/classes/spring-web-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/classes/mybatis/mapper/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/classes/mybatis/mapper/AdminMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/classes/mybatis/mapper/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/classes/mybatis/mapper/AdminMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/lib/crowd03-admin-component-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/lib/crowd03-admin-component-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/lib/crowd04-admin-entity-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/lib/crowd04-admin-entity-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/lib/crowd05-common-util-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/lib/crowd05-common-util-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/templates/admin-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/templates/admin-add.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/templates/admin-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/templates/admin-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/templates/common/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/templates/common/sidebar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/templates/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/templates/common/js.html" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/WEB-INF/templates/common/js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/static/ztree/jquery.ztree.all-3.5.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/static/ztree/jquery.ztree.all-3.5.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/static/ztree/zTreeStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/crowd02-admin-webui-1.0-SNAPSHOT/static/ztree/zTreeStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/test-classes/com/czklps/crowd/mapper/AdminMapperTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/target/test-classes/com/czklps/crowd/mapper/AdminMapperTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/crowd03-admin-component.iml" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/crowd03-admin-component.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/mvc/config/CrowdExceptionResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/mvc/config/CrowdExceptionResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/mvc/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/mvc/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/mvc/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/mvc/interceptor/LoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/mapper/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/mapper/AdminMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/service/Impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/service/Impl/AdminServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/service/Impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/service/Impl/RoleServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/service/api/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/service/api/AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/target/classes/com/czklps/crowd/mvc/config/CrowdExceptionResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/target/classes/com/czklps/crowd/mvc/config/CrowdExceptionResolver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/target/classes/com/czklps/crowd/mvc/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/target/classes/com/czklps/crowd/mvc/controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/target/classes/com/czklps/crowd/mvc/interceptor/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/target/classes/com/czklps/crowd/mvc/interceptor/LoginInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/service/api/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java/com/czklps/crowd/service/api/RoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/target/classes/com/czklps/crowd/mapper/AdminMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/target/classes/com/czklps/crowd/mapper/AdminMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/target/classes/com/czklps/crowd/service/Impl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/target/classes/com/czklps/crowd/service/Impl/AdminServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/target/classes/com/czklps/crowd/service/api/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/target/classes/com/czklps/crowd/service/api/AdminService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd05-common-util/src/main/java/com/czklps/crowd/exception/AccessForbiddenException.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowd05-common-util/src/main/java/com/czklps/crowd/exception/AccessForbiddenException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd05-common-util/target/classes/com/czklps/crowd/exception/AccessForbiddenException.class" beforeDir="false" afterPath="$PROJECT_DIR$/crowd05-common-util/target/classes/com/czklps/crowd/exception/AccessForbiddenException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd06-common-reverse/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crowd06-common-reverse/src/main/resources/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd04-admin-entity/src/main/java/com/czklps/crowd/entity/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd04-admin-entity/src/main/java/com/czklps/crowd/entity/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowd01-admin-parent/crowd04-admin-entity/target/classes/com/czklps/crowd/entity/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/crowd01-admin-parent/crowd04-admin-entity/target/classes/com/czklps/crowd/entity/Admin.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,10 +96,10 @@
         <option value="JavaFXApplication" />
         <option value="spring-beans.schema" />
         <option value="Jsp File" />
-        <option value="JUnit4 Test Class" />
         <option value="Interface" />
-        <option value="Class" />
+        <option value="JUnit4 Test Class" />
         <option value="JavaScript File" />
+        <option value="Class" />
         <option value="HTML File" />
       </list>
     </option>
@@ -183,7 +149,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../puce" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/webapp/WEB-INF/templates" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -194,22 +160,22 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.32014388" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Angular Template" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Study\Java\java-project\crowd\crowd01-admin-parent\crowd02-admin-webui\src\main\webapp\WEB-INF\templates" />
-      <recent name="E:\Study\Java\java-project\crowd\crowd01-admin-parent\crowd02-admin-webui\src\main\webapp\static\css" />
       <recent name="E:\Study\Java\java-project\crowd\crowd01-admin-parent\crowd02-admin-webui\src\main\webapp\static" />
+      <recent name="E:\Study\Java\java-project\crowd\crowd01-admin-parent\crowd04-admin-entity\src\main\java\com\czklps\crowd\entity" />
+      <recent name="E:\Study\Java\java-project\crowd\crowd01-admin-parent\crowd02-admin-webui\src\main\webapp\static\css" />
       <recent name="E:\Study\Java\java-project\crowd\crowd01-admin-parent\crowd02-admin-webui\src\main\webapp\WEB-INF\static" />
-      <recent name="E:\Study\Java\java-project\crowd\crowd01-admin-parent\crowd02-admin-webui\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Study\Java\java-project\crowd\crowd01-admin-parent\crowd02-admin-webui\src\main\webapp\WEB-INF\templates\modal" />
       <recent name="E:\Study\Java\java-project\crowd\crowd01-admin-parent\crowd02-admin-webui\src\main\resources\mybatis\mapper" />
       <recent name="E:\Study\Java\java-project\crowd\crowd01-admin-parent\crowd03-admin-component\src\main\java\com\czklps\crowd\mapper" />
       <recent name="E:\Study\Java\java-project\crowd\crowd01-admin-parent\crowd02-admin-webui\src\main\webapp\WEB-INF\templates\test" />
       <recent name="E:\Study\Java\java-project\crowd\crowd01-admin-parent\crowd02-admin-webui\src\main\webapp" />
-      <recent name="E:\Study\Java\java-project\crowd\crowd01-admin-parent\crowd02-admin-webui\src\main\webapp\WEB-INF\static\js" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -219,6 +185,7 @@
       <recent name="com.czklps.crowd" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.czklps.crowd.service.Impl" />
       <recent name="com.czklps.crowd.util" />
       <recent name="com.czklps.crowd.mapper" />
     </key>
@@ -240,15 +207,42 @@
     <option name="openRunningConfigInTab" value="true" />
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.0.50">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration name="BB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.czklps.crowd.service.Impl.BB" />
+      <module name="crowd03-admin-component" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.czklps.crowd.service.Impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminMapperTest.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="crowd02-admin-webui" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.czklps.crowd.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.czklps.crowd.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.czklps.crowd.mapper.AdminMapperTest" />
+      <option name="METHOD_NAME" value="getAll" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -285,17 +279,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ResultEntityTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="crowd05-common-util" />
+    <configuration name="MenuServiceImplTest.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="crowd03-admin-component" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.czklps.crowd.constant.*" />
+          <option name="PATTERN" value="com.czklps.crowd.service.Impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.czklps.crowd.util" />
-      <option name="MAIN_CLASS_NAME" value="com.czklps.crowd.util.ResultEntityTest" />
-      <option name="METHOD_NAME" value="testToString" />
+      <option name="PACKAGE_NAME" value="com.czklps.crowd.service.Impl" />
+      <option name="MAIN_CLASS_NAME" value="com.czklps.crowd.service.Impl.MenuServiceImplTest" />
+      <option name="METHOD_NAME" value="getAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -419,17 +413,21 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.BB" />
       <item itemvalue="JUnit.AdminMapperTest.insert" />
-      <item itemvalue="JUnit.ResultEntityTest.testToString" />
       <item itemvalue="JUnit.CrowdUtilTest.md5" />
+      <item itemvalue="JUnit.MenuServiceImplTest.getAll" />
+      <item itemvalue="JUnit.AdminMapperTest.getAll" />
       <item itemvalue="Maven.crowd06-common-reverse" />
       <item itemvalue="Tomcat Server.Tomcat 8.0.50" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AdminMapperTest.insert" />
+        <item itemvalue="JUnit.AdminMapperTest.getAll" />
+        <item itemvalue="Application.BB" />
+        <item itemvalue="JUnit.MenuServiceImplTest.getAll" />
         <item itemvalue="JUnit.CrowdUtilTest.md5" />
-        <item itemvalue="JUnit.ResultEntityTest.testToString" />
       </list>
     </recent_temporary>
   </component>
@@ -493,8 +491,25 @@
       <workItem from="1652157217988" duration="29000" />
       <workItem from="1652170752780" duration="1356000" />
       <workItem from="1652176222250" duration="724000" />
-      <workItem from="1652177111305" duration="2287000" />
+      <workItem from="1652177111305" duration="7362000" />
+      <workItem from="1652236307662" duration="8788000" />
+      <workItem from="1652323247593" duration="7924000" />
+      <workItem from="1652334633120" duration="503000" />
+      <workItem from="1652336003083" duration="8639000" />
+      <workItem from="1652355827616" duration="1607000" />
+      <workItem from="1652403737566" duration="235000" />
+      <workItem from="1652408946819" duration="16375000" />
+      <workItem from="1652491669964" duration="6727000" />
+      <workItem from="1652668680805" duration="288000" />
     </task>
+    <task id="LOCAL-00001" summary="增加角色管理的功能">
+      <created>1652179766438</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652179766438</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,6 +517,10 @@
   </component>
   <component name="UnloadedModulesList">
     <module name="crowd" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="增加角色管理的功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加角色管理的功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

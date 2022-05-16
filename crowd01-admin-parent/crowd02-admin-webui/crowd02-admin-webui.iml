@@ -39,8 +39,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="crowd04-admin-entity" />
-    <orderEntry type="module" module-name="crowd04-admin-entity" />
     <orderEntry type="module" module-name="crowd03-admin-component" />
     <orderEntry type="module" module-name="crowd04-admin-entity" />
     <orderEntry type="module" module-name="crowd05-common-util" />

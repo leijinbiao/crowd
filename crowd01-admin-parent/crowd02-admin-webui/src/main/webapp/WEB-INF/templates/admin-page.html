@@ -75,8 +75,8 @@
                                     <td th:text="${admin.userName}"></td>
                                     <td th:text="${admin.email}"></td>
                                     <td>
-                                        <button type="button" class="btn btn-success btn-xs"><i
-                                                class=" glyphicon glyphicon-check"></i></button>
+                                        <a th:href="@{/assign/to/assign/role/page}+'?adminId='+${admin.id}+'&pageSize='+${pageInfo.pageSize}+'&pageNum='+${pageInfo.pageNum}" onclick="assignBtn(event)" class="btn btn-success btn-xs"><i
+                                                class=" glyphicon glyphicon-check"></i></a>
                                         <a th:href="@{/admin/toEdit/}+${admin.id}+'/'+${pageInfo.pageNum}" onclick="editBtn(event)" class="btn btn-primary btn-xs"><i
                                                 class=" glyphicon glyphicon-pencil"></i></a>
                                         <a th:href="@{/admin}+'/'+${admin.id}+'/'+${pageInfo.pageNum}"
@@ -110,9 +110,28 @@
 <form id="toEdit" method="post">
 
 </form>
+<form id="toAssignRolePage" method="post">
+
+</form>
 <th:block th:replace="common/js :: common_js(~{::script})">
     <script th:src="@{/static/jquery/jquery.pagination.js}"></script>
     <script th:inline="javascript" type="text/javascript">
+        function assignBtn(event){
+            var assignForm = document.getElementById("toAssignRolePage")
+            let src = event.currentTarget.href
+            /*<![CDATA[*/
+            var keyword = [[${param.keyword}]]
+            /*]]>*/
+            // 如果 thymeleaf 中拿出的 keyword 不为空时添加至路径
+            if (keyword != null) src += "&keyword=" + keyword
+
+            assignForm.action = src
+
+            assignForm.submit();
+
+            event.preventDefault();
+        }
+
         function delBtn(event){
             var delForm = document.getElementById("delForm")
             let src = event.currentTarget.href
