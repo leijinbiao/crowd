@@ -1,0 +1,12 @@
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  application:
+    name: crowd-auth-consumer
+server:
+  port: 4000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka/

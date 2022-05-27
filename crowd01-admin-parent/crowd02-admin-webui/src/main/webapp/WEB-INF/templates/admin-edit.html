@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head th:replace="common/head::common_header(~{::title},~{::link})">
+    <title>admin-edit</title>
+    <link rel="stylesheet" th:href="@{/static/css/main.css}">
+    <link rel="stylesheet" th:href="@{/static/css/doc.min.css}">
+    <style>
+        .tree li {
+            list-style-type: none;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+<div th:replace="common/nav::common_nav"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div th:replace="common/sidebar::common_sidebar"></div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <ol class="breadcrumb">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">数据列表</a></li>
+                <li class="active">修改</li>
+            </ol>
+            <div class="panel panel-default">
+                <div class="panel-heading">表单数据<div style="float:right;cursor:pointer;" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-question-sign"></i></div></div>
+                <div class="panel-body">
+                    <form role="form" th:action="@{/admin/edit}" method="post">
+                        <input type="hidden" name="_method" value="put">
+                        <input type="hidden" name="id" th:value="${admin.id}">
+                        <input type="hidden" name="pageNum" th:value="${pageNum}">
+                        <input type="hidden" name="keyword" th:value="${keyword}">
+                        <div class="form-group">
+                            <label for="loginAcct">登陆账号</label>
+                            <input type="text" th:value="${admin.loginAcct}" name="loginAcct" class="form-control" id="loginAcct">
+                        </div>
+                        <div class="form-group">
+                            <label for="userName">用户名称</label>
+                            <input type="text" th:value="${admin.userName}" name="userName" class="form-control" id="userName">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱地址</label>
+                            <input type="email" th:value="${admin.email}" name="email" class="form-control" id="email">
+                            <p class="help-block label label-warning">请输入合法的邮箱地址, 格式为： xxxx@xxxx.com</p>
+                        </div>
+                        <button type="submit" class="btn btn-success"><i class="glyphicon glyphicon-edit"></i> 修改</button>
+                        <button type="reset" class="btn btn-danger"><i class="glyphicon glyphicon-refresh"></i> 重置</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<th:block th:replace="common/js::common_js(~{::script})">
+    <script type="text/javascript">
+        $(function () {
+            $(".list-group-item").click(function(){
+                if ( $(this).find("ul") ) {
+                    $(this).toggleClass("tree-closed");
+                    if ( $(this).hasClass("tree-closed") ) {
+                        $("ul", this).hide("fast");
+                    } else {
+                        $("ul", this).show("fast");
+                    }
+                }
+            });
+        });
+    </script>
+</th:block>
+</body>
+</html>

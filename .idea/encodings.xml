@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowd01-admin-parent/crowd04-admin-entity/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowd01-admin-parent/crowd04-admin-entity/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/demo1-model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/demo1-model/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/demo1-reverse/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/demo1-reverse/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/demo1-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/demo1-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/demo1-web/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/sendShortMessage/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/sendShortMessage/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/start/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/start/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

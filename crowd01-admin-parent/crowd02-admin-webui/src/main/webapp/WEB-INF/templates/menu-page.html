@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head th:replace="common/head::common_header(~{::title},~{::link})">
+    <title>menu-page</title>
+    <link rel="stylesheet" th:href="@{/static/css/main.css}">
+    <link rel="stylesheet" th:href="@{/static/ztree/zTreeStyle.css}">
+</head>
+<body>
+<div th:replace="common/nav::common_nav"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div th:replace="common/sidebar::common_sidebar"></div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <ul id="treeDemo" class="ztree"></ul>
+        </div>
+    </div>
+</div>
+<th:block th:replace="modal/modal-menu-add"></th:block>
+<th:block th:replace="modal/modal-menu-edit"></th:block>
+<th:block th:replace="modal/modal-menu-confirm"></th:block>
+<th:block th:replace="common/js::common_js(~{::script})">
+    <script type="text/javascript" th:src="@{/static/ztree/jquery.ztree.all-3.5.min.js}"></script>
+    <script type="text/javascript" th:src="@{/static/crowd/my-menu.js}"></script>
+    <script type="text/javascript">
+        $(function () {
+            //生成 tree
+            generateTree();
+            /**
+             * 打开添加 modal 框
+             * 并且设置将当前节点的 id 设置成全局变量 pid
+             */
+            $("#treeDemo").on("click", ".addBtn", function () {
+
+                window.pid = this.id;
+
+                $("#menuAddModal").modal('show')
+            })
+            /**
+             * 打开 modal 框后获取属性值
+             * 如果 icon 没有选中的就将 icon 设置成默认值
+             */
+            $("#menuSaveBtn").click(function () {
+                let name = $("#menuAddModal [name=name]").val();
+                let url = $("#menuAddModal [name=url]").val();
+                let icon = $("#menuAddModal [name=icon]:checked").val();
+                if(icon==undefined||icon==""){
+                    icon=$("#menuAddModal [name=icon]").val()
+                }
+                /**
+                 * 发送 ajax 请求
+                 */
+                $.ajax({
+                    "url": "menu/add",
+                    "type": "post",
+                    "dataType": "json",
+                    "data": {
+                        "pid":window.pid,
+                        "name": name,
+                        "url": url,
+                        "icon": icon
+                    },
+                    "success": function (res) {
+
+                        let result = res.result;
+
+                        if (result == "SUCCESS") {
+
+                            layer.msg("添加成功");
+
+                            generateTree();
+                        }
+                        if (result == "FAILED") {
+                            layer.msg("操作失败！" + res.message)
+                        }
+                    },
+                    "error": function (res) {
+                        layer.msg(res.status + " " + res.statusText);
+                    }
+                })
+
+                /**
+                 * 将 modal 隐藏
+                 * 并且将表单设置成空值
+                 */
+                $("#menuAddModal").modal('hide')
+                $("#menuResetBtn").click();
+            })
+            /**
+             * 打开编辑 modal 框
+             * 并且设置将当前节点的 id 设置成全局变量 id
+             */
+            $("#treeDemo").on("click", ".editBtn", function () {
+
+                let treeObj = $.fn.zTree.getZTreeObj("treeDemo");
+
+                let currentId = window.id = this.id;
+
+                console.log(window.id);
+
+                let currentNode = treeObj.getNodeByParam("id", currentId, null);
+
+                $("#menuEditModal [name=name]").val(currentNode.name);
+                $("#menuEditModal [name=url]").val(currentNode.url);
+                $("#menuEditModal [name=icon]").val([currentNode.icon]);
+
+                $("#menuEditModal").modal('show')
+            })
+
+            $("#menuEditBtn").click(function(){
+                let name = $("#menuEditModal [name=name]").val();
+                let url = $("#menuEditModal [name=url]").val();
+                let icon = $("#menuEditModal [name=icon]:checked").val();
+                $.ajax({
+                    "url": "menu/update",
+                    "type": "post",
+                    "dataType": "json",
+                    "data": {
+                        "id":window.id,
+                        "name": name,
+                        "url": url,
+                        "icon": icon
+                    },
+                    "success": function (res) {
+
+                        let result = res.result;
+
+                        if (result == "SUCCESS") {
+
+                            layer.msg("修改成功");
+
+                            generateTree();
+                        }
+                        if (result == "FAILED") {
+                            layer.msg("操作失败！" + res.message)
+                        }
+                    },
+                    "error": function (res) {
+                        layer.msg(res.status + " " + res.statusText);
+                    }
+                })
+
+            })
+
+            $("#treeDemo").on("click", ".removeBtn", function () {
+                let treeObj = $.fn.zTree.getZTreeObj("treeDemo");
+
+                let currentId = window.id = this.id;
+
+                let currentNode = treeObj.getNodeByParam("id", currentId, null);
+                /**
+                 * layer 弹窗的实现
+                 */
+                layer.confirm('确定要删除以下菜单吗?<br> [ '+currentNode.name+' ]', {
+                    btn: ['确定','取消']
+                }, function(index){
+                    $.ajax({
+                        "url": "menu/remove",
+                        "type": "post",
+                        "dataType": "json",
+                        "data": {
+                            "id":window.id,
+                        },
+                        "success": function (res) {
+
+                            let result = res.result;
+
+                            if (result == "SUCCESS") {
+                                layer.msg("删除成功");
+                                generateTree();
+                            }
+                            if (result == "FAILED") {
+
+                                layer.msg("操作失败！" + res.message)
+                            }
+                            layer.close(index);
+                        },
+                        "error": function (res) {
+                            layer.close(index);
+                            layer.msg(res.status + " " + res.statusText);
+                        }
+                    })
+                }, function(index){
+                    layer.close(index);
+                });
+                // window.id = this.id;
+                // $("#menuConfirmModal").modal('show')
+            })
+            /**
+             * modal 框的实现
+             */
+            // $("#confirmBtn").click(function(){
+                // $.ajax({
+                //     "url": "menu/remove",
+                //     "type": "post",
+                //     "dataType": "json",
+                //     "data": {
+                //         "id":window.id,
+                //     },
+                //     "success": function (res) {
+                //
+                //         let result = res.result;
+                //
+                //         if (result == "SUCCESS") {
+                //
+                //             layer.msg("删除成功");
+                //
+                //             generateTree();
+                //         }
+                //         if (result == "FAILED") {
+                //             layer.msg("操作失败！" + res.message)
+                //         }
+                //     },
+                //     "error": function (res) {
+                //         layer.msg(res.status + " " + res.statusText);
+                //     }
+                // })
+                // $("#menuConfirmModal").modal('hide')
+            // })
+
+
+
+        })
+
+    </script>
+</th:block>
+</body>
+</html>

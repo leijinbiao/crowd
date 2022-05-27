@@ -1,0 +1,16 @@
+server:
+  port: 9000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5000/eureka/
+spring:
+  application:
+    name: zuul-gateway
+zuul:
+  routes:
+    emp:
+      service-id: provider
+      path: /pro/**
+#  ignored-services: '*'
+#  prefix: /bobo

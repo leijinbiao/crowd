@@ -1,0 +1,22 @@
+server:
+  port: 2000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka/
+spring:
+  application:
+    name: crowd-mysql-provider
+  datasource:
+    name: mydb
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 123456789
+    url: jdbc:mysql://localhost:3306/crowd?useSSL=true
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  mapper-locations: classpath*:/mybatis/mapper/*Mapper.xml
+logging:
+  level:
+    com.czklps.crowd.mapper: debug
+    com.czklps.crowd.test: debug

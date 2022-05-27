@@ -1,0 +1,13 @@
+server:
+  port: 1000
+spring:
+  application:
+    name: crowd-eureka
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defalutZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    fetch-registry: false
+    register-with-eureka: false

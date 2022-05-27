@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="crowd08-member-eureka" />
+        <module name="crowd06-common-reverse" />
+        <module name="sendShortMessage" />
+        <module name="crowd10-member-mysql-provider" />
+        <module name="eureka" />
+        <module name="crowd04-admin-entity" />
+        <module name="common" />
+        <module name="provider" />
+        <module name="demo-web" />
+        <module name="crowd15-member-pay-consumer" />
+        <module name="crowd11-member-redis-provider" />
+        <module name="demo-model" />
+        <module name="consumer" />
+        <module name="dashboard" />
+        <module name="demo-service" />
+        <module name="crowd12-member-authentication-consumer" />
+        <module name="start" />
+        <module name="zuul" />
+        <module name="crowd13-member-project-consumer" />
+        <module name="lombok" />
+        <module name="crowd09-member-entity" />
+        <module name="crowd05-common-util" />
+        <module name="crowd03-admin-component" />
+        <module name="demo1-reverse" />
+        <module name="crowd02-admin-webui" />
+        <module name="crowd16-member-zuul" />
+        <module name="feign-consumer" />
+        <module name="crowd14-member-order-consumer" />
+        <module name="crowd17-member-api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common" target="8" />
+      <module name="consumer" target="8" />
+      <module name="crowd" target="1.5" />
+      <module name="crowd01-admin-parent" target="1.5" />
+      <module name="crowd02-admin-webui" target="8" />
+      <module name="crowd03-admin-component" target="8" />
+      <module name="crowd04-admin-entity" target="8" />
+      <module name="crowd05-common-util" target="8" />
+      <module name="crowd06-common-reverse" target="8" />
+      <module name="crowd07-member-parent" target="8" />
+      <module name="crowd08-member-eureka" target="8" />
+      <module name="crowd09-member-entity" target="8" />
+      <module name="crowd10-member-mysql-provider" target="8" />
+      <module name="crowd11-member-redis-provider" target="8" />
+      <module name="crowd12-member-authentication-consumer" target="8" />
+      <module name="crowd13-member-project-consumer" target="8" />
+      <module name="crowd14-member-order-consumer" target="8" />
+      <module name="crowd15-member-pay-consumer" target="8" />
+      <module name="crowd16-member-zuul" target="8" />
+      <module name="crowd17-member-api" target="8" />
+      <module name="dashboard" target="8" />
+      <module name="demo" target="1.8" />
+      <module name="demo-model" target="1.8" />
+      <module name="demo-service" target="1.8" />
+      <module name="demo-web" target="1.8" />
+      <module name="demo1" target="8" />
+      <module name="demo1-reverse" target="1.8" />
+      <module name="eureka" target="8" />
+      <module name="feign-consumer" target="8" />
+      <module name="lombok" target="8" />
+      <module name="provider" target="8" />
+      <module name="sendShortMessage" target="1.8" />
+      <module name="start" target="1.8" />
+      <module name="zuul" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

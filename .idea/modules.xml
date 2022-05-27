@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/demo1/common/common.iml" filepath="$PROJECT_DIR$/demo1/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo1/consumer/consumer.iml" filepath="$PROJECT_DIR$/demo1/consumer/consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crowd.iml" filepath="$PROJECT_DIR$/crowd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crowd01-admin-parent/crowd01-admin-parent.iml" filepath="$PROJECT_DIR$/crowd01-admin-parent/crowd01-admin-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/crowd02-admin-webui.iml" filepath="$PROJECT_DIR$/crowd01-admin-parent/crowd02-admin-webui/crowd02-admin-webui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/crowd03-admin-component.iml" filepath="$PROJECT_DIR$/crowd01-admin-parent/crowd03-admin-component/crowd03-admin-component.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crowd01-admin-parent/crowd04-admin-entity/crowd04-admin-entity.iml" filepath="$PROJECT_DIR$/crowd01-admin-parent/crowd04-admin-entity/crowd04-admin-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crowd05-common-util/crowd05-common-util.iml" filepath="$PROJECT_DIR$/crowd05-common-util/crowd05-common-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crowd06-common-reverse/crowd06-common-reverse.iml" filepath="$PROJECT_DIR$/crowd06-common-reverse/crowd06-common-reverse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crowd07-member-parent/crowd07-member-parent.iml" filepath="$PROJECT_DIR$/crowd07-member-parent/crowd07-member-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crowd07-member-parent/crowd08-member-eureka/crowd08-member-eureka.iml" filepath="$PROJECT_DIR$/crowd07-member-parent/crowd08-member-eureka/crowd08-member-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crowd07-member-parent/crowd09-member-entity/crowd09-member-entity.iml" filepath="$PROJECT_DIR$/crowd07-member-parent/crowd09-member-entity/crowd09-member-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crowd07-member-parent/crowd10-member-mysql-provider/crowd10-member-mysql-provider.iml" filepath="$PROJECT_DIR$/crowd07-member-parent/crowd10-member-mysql-provider/crowd10-member-mysql-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crowd07-member-parent/crowd11-member-redis-provider/crowd11-member-redis-provider.iml" filepath="$PROJECT_DIR$/crowd07-member-parent/crowd11-member-redis-provider/crowd11-member-redis-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crowd07-member-parent/crowd12-member-authentication-consumer/crowd12-member-authentication-consumer.iml" filepath="$PROJECT_DIR$/crowd07-member-parent/crowd12-member-authentication-consumer/crowd12-member-authentication-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crowd07-member-parent/crowd13-member-project-consumer/crowd13-member-project-consumer.iml" filepath="$PROJECT_DIR$/crowd07-member-parent/crowd13-member-project-consumer/crowd13-member-project-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crowd07-member-parent/crowd14-member-order-consumer/crowd14-member-order-consumer.iml" filepath="$PROJECT_DIR$/crowd07-member-parent/crowd14-member-order-consumer/crowd14-member-order-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crowd07-member-parent/crowd15-member-pay-consumer/crowd15-member-pay-consumer.iml" filepath="$PROJECT_DIR$/crowd07-member-parent/crowd15-member-pay-consumer/crowd15-member-pay-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crowd07-member-parent/crowd16-member-zuul/crowd16-member-zuul.iml" filepath="$PROJECT_DIR$/crowd07-member-parent/crowd16-member-zuul/crowd16-member-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crowd07-member-parent/crowd17-member-api/crowd17-member-api.iml" filepath="$PROJECT_DIR$/crowd07-member-parent/crowd17-member-api/crowd17-member-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo1/dashboard/dashboard.iml" filepath="$PROJECT_DIR$/demo1/dashboard/dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo1-model/demo-model.iml" filepath="$PROJECT_DIR$/demo/demo1-model/demo-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo1-service/demo-service.iml" filepath="$PROJECT_DIR$/demo/demo1-service/demo-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo1-web/demo-web.iml" filepath="$PROJECT_DIR$/demo/demo1-web/demo-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo1/demo1.iml" filepath="$PROJECT_DIR$/demo1/demo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo1-reverse/demo1-reverse.iml" filepath="$PROJECT_DIR$/demo/demo1-reverse/demo1-reverse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo1/eureka/eureka.iml" filepath="$PROJECT_DIR$/demo1/eureka/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo1/feign-consumer/feign-consumer.iml" filepath="$PROJECT_DIR$/demo1/feign-consumer/feign-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo1/lombok/lombok.iml" filepath="$PROJECT_DIR$/demo1/lombok/lombok.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo1/provider/provider.iml" filepath="$PROJECT_DIR$/demo1/provider/provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/sendShortMessage/sendShortMessage.iml" filepath="$PROJECT_DIR$/demo/sendShortMessage/sendShortMessage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/start/start.iml" filepath="$PROJECT_DIR$/demo/start/start.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo1/zuul/zuul.iml" filepath="$PROJECT_DIR$/demo1/zuul/zuul.iml" />
+    </modules>
+  </component>
+</project>

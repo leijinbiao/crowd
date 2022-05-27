@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: crowd-redis-provider
+  redis:
+    host: 127.0.0.1
+server:
+  port: 3000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka/
